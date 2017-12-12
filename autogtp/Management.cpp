@@ -363,7 +363,11 @@ http://zero-test.sjeng.org/submit-match
 */
 
 void Management::uploadResult(const QMap<QString,QString> &r, const QMap<QString,QString> &l) {
-
+	
+    if (!m_keepPath.isEmpty()) {
+		QFile(r["file"] + ".sgf").copy(m_keepPath + "/matches/" + r["file"] + ".sgf");
+	}
+	
     QString gzipCmd ="gzip";
 #ifdef WIN32
     gzipCmd.append(".exe");

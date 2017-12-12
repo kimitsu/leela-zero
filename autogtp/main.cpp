@@ -97,6 +97,11 @@ int main(int argc, char *argv[]) {
                  << endl;
             return EXIT_FAILURE;
         }
+        if (!QDir().mkpath(parser.value(keepSgfOption) + "/matches")) {
+            cerr << "Couldn't create output directory for match SGF files!"
+                 << endl;
+            return EXIT_FAILURE;
+        }
     }
     if (parser.isSet(keepDebugOption)) {
         if (!QDir().mkpath(parser.value(keepDebugOption))) {
