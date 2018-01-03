@@ -422,11 +422,7 @@ void Management::cleanupFiles(const QString &fileName) {
         QFile(list.at(i).fileName()).remove();
     }
 }
-	
-    if (!m_keepPath.isEmpty()) {
-		QFile(r["file"] + ".sgf").copy(m_keepPath + "/matches/" + r["file"] + ".sgf");
-	}
-	
+
 void Management::gzipFile(const QString &fileName) {
     QString gzipCmd ="gzip";
 #ifdef WIN32

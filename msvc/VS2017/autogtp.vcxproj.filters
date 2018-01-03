@@ -79,9 +79,8 @@
     <CustomBuild Include="release\moc_predefs.h.cbt">
       <Filter>Generated Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="..\..\autogtp\Worker.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
+    <CustomBuild Include="..\curl.exe" />
+    <CustomBuild Include="..\gzip.exe" />
     <CustomBuild Include="..\..\autogtp\Job.h">
       <Filter>Generated Files</Filter>
     </CustomBuild>
